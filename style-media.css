@@ -3,6 +3,7 @@
     #card{
         display: block;
         height: 100%;
+        width: 100%;
         overflow: scroll;
         padding: 0px;
         border-radius: 0px;
