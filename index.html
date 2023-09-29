@@ -1,1 +1,68 @@
-Hello World
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0"> <!-- displays site properly based on user's device -->
+
+  <link rel="icon" type="image/png" sizes="32x32" href="./assets/images/favicon-32x32.png">
+  <link rel="stylesheet" href="style.css">
+  <link rel="stylesheet" href="assets/fonts/">
+  <link rel="stylesheet" href="style-media.css">
+  
+  <title>Frontend Mentor | Newsletter sign-up form with success message</title>
+
+  <!-- Feel free to remove these styles or customise in your own stylesheet 👍 -->
+  <style>
+    .attribution { font-size: 11px; text-align: center; }
+    .attribution a { color: hsl(228, 45%, 44%); }
+  </style>
+</head>
+<body>
+  
+  <div id="card">
+    
+    <section id="info">
+      <div class="h">     <h1>Stay updated!</h1></div>
+      <p>
+        Join 60,000+ product menagers receiving mounthly updates on
+      </p>
+      <ul>
+        <li><span><img src="assets/images/icon-list.svg" alt=""></span>   Product discovery and buillding what matters </li>
+        <li><span><img src="assets/images/icon-list.svg" alt="">    Measuring to ensure updates are a success</span></li>
+        <li><span><img src="assets/images/icon-list.svg" alt=""></span>  And much more!</li>
+      </ul>
+      <div id="email-mess">
+        <h4>Email address</h4>
+        
+      </div>
+      <input type="email" id="email" name="email" value="" placeholder="email@company.com" >
+      <button id="subscribe" class="btn">Subscribe to monthly newsletter</button>
+    </section>
+    <section id="logo">
+      <img  class="img_logo"  src="assets/images/illustration-sign-up-desktop.svg" alt="">
+    </section>
+    
+  </div>
+  <div id="succes">
+    <div class="tick"><img class="tick" src="assets/images/icon-list.svg" alt=""></div>
+    
+    <h1 class="h">Thanks for subscribing!</h1>
+    <p>Aconformation email has been send to <span class="conf-mail"></span>.Please open it and click the button inside to confirm your subscription.</p>
+    <button id="dismis" class="btn"> Dismiss message</button>
+  </div>
+
+    vscode-file://vscode-app/c:/Users/Kancho%20Kanev/AppData/Local/Programs/Microsoft%20VS%20Code/resources/app/out/vs/code/electron-sandbox/workbench/workbench.html
+
+  
+  
+  <div class="attribution">
+    Challenge by <a href="https://www.frontendmentor.io?ref=challenge" target="_blank">Frontend Mentor</a>. 
+    Coded by <a href="#">Your Name Here</a>.
+  </div>
+  <script src="app.js"></script>
+  <script>
+    window.onload = solve()
+  </script>
+  
+</body>
+</html>
