@@ -54,6 +54,11 @@ label{
     font-size: 80px;
     color: hsl(259, 100%, 65%);
 }
+.fa-solid:hover{
+    cursor: pointer;
+    color: black;
+}
+
 .line{
     width: 80%;
     height: 47px;
