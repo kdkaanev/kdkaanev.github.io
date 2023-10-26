@@ -1,0 +1,71 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0"> <!-- displays site properly based on user's device -->
+
+  
+  <title>Frontend Mentor | Age calculator app</title>
+
+  <!-- Feel free to remove these styles or customise in your own stylesheet 👍 -->
+  <style>
+    .attribution { font-size: 11px; text-align: center; }
+    .attribution a { color: hsl(228, 45%, 44%); }
+  </style>
+  <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.4.2/css/all.min.css">
+  <link rel="stylesheet" href="style.css">
+  <link rel="stylesheet" href="https://fonts.google.com/specimen/Poppins">
+</head>
+<body>
+  <div id="card">
+    <form action="" class="form">
+        <div class="time day">
+          <label for="day">DAY</label>
+          <input id="day" type="text" name="day" placeholder="DD">
+          <p id ="a">This Filds Is Required</p>
+        </div>
+        <div class="time month">
+          <label for="month">MONTH</label>
+          <input id="month" type="text" name="month" placeholder="MM">
+          <p id="b">This Filds Is Required</p>
+        </div>
+        <div class="time year">
+          <label for="year">YEAR</label>
+          <input id="year" type="text" name="year" placeholder="YYYY">
+          <p id="c">This Filds Is Required</p>
+        </div>
+       
+      
+    </form>
+    <div id="invalid">Must be a valid date</div>
+    
+    <div id="border">
+      <div class="line">
+      </div>
+      <i id="btn" class="fa-solid fa-circle-down"></i>
+    </div>
+    
+    <section id="result">
+    
+      <div id="num">
+        <p class="num-day">- -</p>
+        <p class="num-mont">- -</p>
+        <p class="num-year">- -</p>
+      </div>
+      <div id="text">
+        <p class="day">years</p>
+        <p class="month">months</p>
+        <p class="year">days</p>
+
+      </div>
+    </section>
+  </div>
+
+  <div class="attribution">
+    Challenge by <a href="https://www.frontendmentor.io?ref=challenge" target="_blank">Frontend Mentor</a>. 
+    Coded by <a href="#">Your Name Here</a>.
+  </div>
+  <script src="app.js"></script>
+</body>
+
+</html>
