@@ -33,6 +33,7 @@ function date(){
         let funcDay = correctDay(dayValue, monthValue, emptyDay)
         let funcMonth = correctMonth(monthValue,emptyMonth)
         let funcYear = correctYear(yearValue, emptyYear)
+
         if (funcDay&& funcMonth && funcYear){
            console.log(solve(dayValue, monthValue, yearValue))
 
@@ -84,27 +85,26 @@ function date(){
         }
     }
     function solve(d,m,y){
-        let d1= Date.parse(dateNow); 
-        let d2= Date.parse(`${d}/${m}/${y}`);
-        
-        let mom = moment(d1);
-        let years = mom.diff(d2, 'years');
-        mom.add(-years, 'years');
-        let months = mom.diff(d2, 'months');
-        mom.add(-months, 'months');
-        let days = mom.diff(d2, 'days');
-
-        let result = {years: years, months: months, days: days};
-        return result
-    }
-    function dateNow(){
+        // let d1= Date.parse(dateNow); 
+        // let d2= Date.parse(`${d}/${m}/${y}`);
         let currentDate = new Date()
         let day = currentDate.getDate();
         let month = currentDate.getMonth() + 1;
         let year = currentDate.getFullYear();
-        let my_date = day+"/"+month+"/"+year;
-        return my_date
+        
+        
+        let d1 = new Date(year, month, day);                // April 5, 2014
+        let d2 = new Date(y, m, d);               // February 22, 2013
+        let diff = new Date(
+            d1.getFullYear()-d2.getFullYear(), 
+            d1.getMonth()-d2.getMonth(), 
+            d1.getDate()-d2.getDate()
+
+        );
+        return diff.getFullYear()
+        
     }
+   
     
 }
 
