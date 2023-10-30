@@ -33,8 +33,10 @@ function date(){
         let funcDay = correctDay(dayValue, monthValue, emptyDay)
         let funcMonth = correctMonth(monthValue,emptyMonth)
         let funcYear = correctYear(yearValue, emptyYear)
+
         if (funcDay&& funcMonth && funcYear){
-            console.log('kyp')
+           console.log(solve(dayValue, monthValue, yearValue))
+
         }else if(dayValue === '' || monthValue === '' || yearValue == ''){
             return funcDay,funcMonth,funcYear
             
@@ -82,6 +84,27 @@ function date(){
             return true
         }
     }
+    function solve(d,m,y){
+        // let d1= Date.parse(dateNow); 
+        // let d2= Date.parse(`${d}/${m}/${y}`);
+        let currentDate = new Date()
+        let day = currentDate.getDate();
+        let month = currentDate.getMonth() + 1;
+        let year = currentDate.getFullYear();
+        
+        
+        let d1 = new Date(year, month, day);                // April 5, 2014
+        let d2 = new Date(y, m, d);               // February 22, 2013
+        let diff = new Date(
+            d1.getFullYear()-d2.getFullYear(), 
+            d1.getMonth()-d2.getMonth(), 
+            d1.getDate()-d2.getDate()
+
+        );
+        return diff.getFullYear()
+        
+    }
+   
     
 }
 
