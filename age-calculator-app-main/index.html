@@ -14,6 +14,7 @@
   </style>
   <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.4.2/css/all.min.css">
   <link rel="stylesheet" href="style.css">
+  <link rel="stylesheet" href="media.css">
   <link rel="stylesheet" href="https://fonts.google.com/specimen/Poppins">
 </head>
 <body>
@@ -21,17 +22,17 @@
     <form action="" class="form">
         <div class="time day">
           <label for="day">DAY</label>
-          <input id="day" type="text" name="day" placeholder="DD">
+          <input id="day" class="date" type="text" name="day" placeholder="DD">
           <p id ="a">This Filds Is Required</p>
         </div>
         <div class="time month">
           <label for="month">MONTH</label>
-          <input id="month" type="text" name="month" placeholder="MM">
+          <input id="month" class="date" type="text" name="month" placeholder="MM">
           <p id="b">This Filds Is Required</p>
         </div>
         <div class="time year">
           <label for="year">YEAR</label>
-          <input id="year" type="text" name="year" placeholder="YYYY">
+          <input id="year" class="date" type="text" name="year" placeholder="YYYY">
           <p id="c">This Filds Is Required</p>
         </div>
        
@@ -48,16 +49,11 @@
     <section id="result">
     
       <div id="num">
-        <p class="num-day">- -</p>
-        <p class="num-mont">- -</p>
-        <p class="num-year">- -</p>
+        <p id="num-day">- - <span class="black">days</span></p>
+        <p id="num-month">- - <span class="black">months</span></p>
+        <p id="num-year">- - <span class="black">years</span></p>
       </div>
-      <div id="text">
-        <p class="day">years</p>
-        <p class="month">months</p>
-        <p class="year">days</p>
-
-      </div>
+    
     </section>
   </div>
 

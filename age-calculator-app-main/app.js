@@ -30,13 +30,27 @@ function date(){
         const emptyDay = document.getElementById('a')
         const emptyYear = document.getElementById('c')
         const invalid = document.getElementById('invalid')
+        const showDay = document.getElementById('num-day')
+        const showMonth = document.getElementById('num-month')
+        const showYear = document.getElementById('num-year')
+        let spanDay = document.createElement('span')
+        let spanMonth = document.createElement('span')
+        let spanYear = document.createElement('span')
         let funcDay = correctDay(dayValue, monthValue, emptyDay)
         let funcMonth = correctMonth(monthValue,emptyMonth)
         let funcYear = correctYear(yearValue, emptyYear)
-
+        
         if (funcDay&& funcMonth && funcYear){
-           console.log(solve(dayValue, monthValue, yearValue))
-
+            let dateArr = solve(dayValue, monthValue, yearValue)
+            let [d, m ,y]  = dateArr
+            showDay.textContent = d 
+            showDay.appendChild(spanDay).textContent = ' days'
+            showMonth.textContent = m 
+            showMonth.appendChild(spanMonth).textContent = ' months'
+            showYear.textContent = y
+            showYear.appendChild(spanYear).textContent = ' years'
+            
+            
         }else if(dayValue === '' || monthValue === '' || yearValue == ''){
             return funcDay,funcMonth,funcYear
             
@@ -87,21 +101,41 @@ function date(){
     function solve(d,m,y){
         // let d1= Date.parse(dateNow); 
         // let d2= Date.parse(`${d}/${m}/${y}`);
+       
         let currentDate = new Date()
         let day = currentDate.getDate();
-        let month = currentDate.getMonth() + 1;
+        let month = currentDate.getMonth();
         let year = currentDate.getFullYear();
         
         
         let d1 = new Date(year, month, day);                // April 5, 2014
         let d2 = new Date(y, m, d);               // February 22, 2013
-        let diff = new Date(
-            d1.getFullYear()-d2.getFullYear(), 
-            d1.getMonth()-d2.getMonth(), 
-            d1.getDate()-d2.getDate()
+        const february = (d1 % 4 === 0 && d1 % 100 !== 0) || d1 % 400 === 0 ? 29 : 28;
+        const daysInMonth = [31, february, 31, 30, 31, 30, 31, 31, 30, 31, 30, 31];
 
-        );
-        return diff.getFullYear()
+        let yearDiff =  d1.getYear()-d2.getYear()
+
+        let monthDiff = d1.getMonth() - d2.getMonth();
+            if (monthDiff < 0) {
+                yearDiff--;
+                monthDiff += 12;
+            }
+        
+
+            let dayDiff = d1.getDate() - d2.getDate();
+            if (dayDiff < 0) {
+              if (monthDiff > 0) {
+                monthDiff--;
+              } else {
+                yearDiff--;
+                monthDiff = 11;
+              }
+              dayDiff += daysInMonth[d1.getMonth()];
+            }
+
+            result = [dayDiff, monthDiff, yearDiff]
+        return result
+    
         
     }
    
