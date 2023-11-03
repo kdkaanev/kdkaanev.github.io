@@ -1,0 +1,16 @@
+@media(max-width:700px){
+    #card{
+        text-align: center;
+        position: relative;
+    }
+    #border{
+        display: block;
+        position: relative;
+    }
+    .form{
+        justify-content: space-evenly;
+    }
+    #result{
+        justify-content: space-evenly;
+    }
+}

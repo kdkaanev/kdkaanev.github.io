@@ -29,6 +29,10 @@ body{
     flex-direction: column;
  
 }
+.date:hover{
+    cursor: pointer;
+    color: black;
+}
 #border{
     display: flex;
     justify-content: center;
@@ -81,6 +85,9 @@ label{
 p{
     margin: 0px;
 }
+span{
+    color: black;
+}
 #text{
     font-weight: bold;
 }
@@ -104,4 +111,7 @@ p{
     display: none;
     font-size: 11px;
     margin-left: 32px;
+}
+.black{
+    color: black;
 }
