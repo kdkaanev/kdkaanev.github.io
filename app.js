@@ -41,6 +41,10 @@ function date(){
         let funcYear = correctYear(yearValue, emptyYear)
         
         if (funcDay&& funcMonth && funcYear){
+            emptyMonth.style.display = 'none'
+            emptyDay.style.display = 'none'
+            emptyYear.style.display = 'none'
+            invalid.style.display = 'none'
             let dateArr = solve(dayValue, monthValue, yearValue)
             let [d, m ,y]  = dateArr
             showDay.textContent = d 
