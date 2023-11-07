@@ -1,0 +1,24 @@
+body{
+    background-color: gray;
+    height: 100vh;
+    color: rgb(237 237 240);
+    position: relative;
+}
+#main{
+    position: absolute;
+    left: 50%;
+    top: 50%;
+    transform: translate(-50%,-50%);
+    height: 70%;
+    width: 50%;
+    background-color: rgb(20 28 47);
+    border-radius: 8px;
+}
+#card{
+    background-color: rgb(31 42 72);
+}
+#js-avatar{
+    height: 80px;
+    width: 80px;
+    border-radius: 100%;
+}
