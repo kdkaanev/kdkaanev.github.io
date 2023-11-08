@@ -1,5 +1,5 @@
 body{
-    background-color: gray;
+    background-color: rgb(20 28 47);
     height: 100vh;
     color: rgb(237 237 240);
     position: relative;
@@ -13,6 +13,47 @@ body{
     width: 50%;
     background-color: rgb(20 28 47);
     border-radius: 8px;
+}
+#header{
+    display: flex;
+    justify-content: space-between;
+    padding-top: 16px;
+    background-color: rgb(20 28 47);
+    border-radius: 8px;
+    margin-bottom: 16px;
+}
+.light{
+    font-size: small;
+    text-align: center;
+    
+}
+.sun{
+    padding: 4px;
+    
+}
+#search{
+    display: flex;
+    justify-content: space-between;
+    background-color:rgb(31 42 72); 
+    margin-bottom:16px;
+    padding: 16px;
+    border-radius: 8px;
+}
+#js-user{
+    background-color: rgb(31 42 72);
+    
+}
+:placeholder-shown{
+    border: none;
+}
+::placeholder{
+    color: white;
+
+}
+#js-search{
+    border-radius: 8px;
+    background-color: rgb(0 121 254);
+    color: white;
 }
 #card{
     background-color: rgb(31 42 72);
