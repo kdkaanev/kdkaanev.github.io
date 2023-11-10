@@ -1,4 +1,5 @@
-@import url('https://fonts.googleapis.com/css2?family=Roboto+Mono&display=swap');
+
+  @import url('https://fonts.googleapis.com/css2?family=Roboto+Mono&family=Space+Mono&display=swap');
 
 body{
     background-color: rgb(20 28 47);
@@ -6,6 +7,13 @@ body{
     color: rgb(237 237 240);
     position: relative;
     
+}
+h4{
+    font-size: 13px;
+}
+a{
+    text-decoration: none;
+    color:  rgb(237 237 240);
 }
 #main{
     position: absolute;
@@ -16,7 +24,8 @@ body{
     width: 50%;
     background-color: rgb(20 28 47);
     border-radius: 8px;
-    font-family: 'Roboto Mono', monospace;
+    font-family: 'Space Mono', monospace;
+
 }
 #header{
     display: flex;
@@ -35,6 +44,7 @@ body{
     padding: 4px;
     
 }
+
 #search{
     display: flex;
     justify-content: space-between;
@@ -42,6 +52,11 @@ body{
     margin-bottom:16px;
     padding: 8px 8px 8px 16px;
     border-radius: 8px;
+}
+#err{
+    margin-left: 48px;
+    padding-top: 10px;
+    color: #f74646;
 }
 #js-user{
     background-color: rgb(31 42 72);
@@ -66,7 +81,7 @@ body{
     cursor: pointer;
 }
 #js-search:hover{
-    opacity: 0.5;
+    background-color: #5fabff;
 }
 .sun{
     cursor: pointer;
@@ -93,24 +108,33 @@ body{
     height: 80px;
     width: 80px;
     border-radius: 100%;
-   
+  
     
+}
+#js-name{
+    font-size: 26px;
 }
 #avatar{
     margin-left: 5%;
     
 }
+#js-name{
+    font-weight: bold;
+    
+}
 #js-login{
     color: rgb(1 118 248);
+    font-size: 16px;
 }
 #js-bio{
     opacity: 0.5;
+
 }
 
 #js-joined{
     margin-left: 140px;
     margin-right: 5%;
-    opacity: 0.7;
+    opacity: 0.9;
 }
 .repos{
     grid-area: repos;
@@ -148,6 +172,7 @@ body{
 }
 .card-contact-web{
     grid-area: web;
+    
 }
 .card-contact-twitter{
     grid-area: twit;
