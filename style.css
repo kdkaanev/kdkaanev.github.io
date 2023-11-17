@@ -1,0 +1,201 @@
+
+  @import url('https://fonts.googleapis.com/css2?family=Roboto+Mono&family=Space+Mono&display=swap');
+
+body{
+    background-color: rgb(20 28 47);
+    height: 100vh;
+    color: rgb(237 237 240);
+    position: relative;
+    
+}
+h4{
+    font-size: 13px;
+}
+a{
+    text-decoration: none;
+    color:  rgb(237 237 240);
+}
+#main{
+    position: absolute;
+    left: 50%;
+    top: 50%;
+    transform: translate(-50%,-50%);
+    height: 70%;
+    width: 50%;
+    background-color: rgb(20 28 47);
+    border-radius: 8px;
+    font-family: 'Space Mono', monospace;
+
+}
+#header{
+    display: flex;
+    justify-content: space-between;
+    padding-top: 16px;
+    /* background-color: rgb(20 28 47); */
+    border-radius: 8px;
+    margin-bottom: 16px;
+}
+.light{
+    font-size: small;
+    text-align: center;
+    
+}
+.sun{
+    padding: 4px;
+    
+}
+
+#search{
+    display: flex;
+    justify-content: space-between;
+    background-color:rgb(31 42 72); 
+    margin-bottom:16px;
+    padding: 8px 8px 8px 16px;
+    border-radius: 8px;
+}
+#err{
+    margin-left: 48px;
+    padding-top: 10px;
+    color: #f74646;
+}
+#js-user{
+    background-color: rgb(31 42 72);
+    color: white;
+    
+}
+:placeholder-shown{
+    border: none;
+}
+::placeholder{
+    color: white;
+    font-size: small;
+    opacity: 0.7;
+
+}
+#js-search{
+    border-radius: 8px;
+    background-color: rgb(0 121 254);
+    color: white;
+    width: 100px;
+    height: 40px;
+    cursor: pointer;
+}
+#js-search:hover{
+    background-color: #5fabff;
+}
+.sun{
+    cursor: pointer;
+}
+.sun:hover{
+    opacity: 0.5;
+}
+#card{
+    background-color: rgb(31 42 72);
+}
+#card-info{
+    display: flex;
+    justify-content:space-between;
+    gap: 30px;
+    padding-top: 24px;
+
+}
+.card-pik{
+    display: flex;
+    gap: 32px;
+    margin-left: 5%;
+}
+#js-avatar{
+    height: 80px;
+    width: 80px;
+    border-radius: 100%;
+  
+    
+}
+#js-name{
+    font-size: 26px;
+}
+#avatar{
+    margin-left: 5%;
+    
+}
+#js-name{
+    font-weight: bold;
+    
+}
+#js-login{
+    color: rgb(1 118 248);
+    font-size: 16px;
+}
+#js-bio{
+    opacity: 0.5;
+
+}
+
+#js-joined{
+    margin-left: 140px;
+    margin-right: 5%;
+    opacity: 0.9;
+}
+.repos{
+    grid-area: repos;
+}
+.folls{
+    grid-area: folls;
+}
+.follg{
+    grid-area: follg;
+}
+#repos{
+    grid-area: r-num;
+}
+#folls{
+    grid-area: fs-num;
+}
+#folg{
+    grid-area: fg-num;
+}
+#card-data{
+    display: grid;
+    
+    grid-template-areas: 
+        "repos folls follg"
+        "r-num fs-num fg-num"
+    ;
+    background-color:rgb(20 28 47) ;
+    margin-left: 20%;
+    margin-right: 5%;
+    padding: 24px 20px 20px;
+    border-radius: 16px;
+}
+.card-contact-location{
+    grid-area: loc;
+}
+.card-contact-web{
+    grid-area: web;
+    
+}
+.card-contact-twitter{
+    grid-area: twit;
+    
+    
+}
+
+.card-contact-company{
+    grid-area: git;
+}
+#card-contact{
+    display: grid;
+    gap: 8px;
+    grid-template-areas: 
+        "loc twit "
+        "web git"
+    ;
+    margin-left: 20%;
+    margin-right: 5%;
+    padding: 24px 20px 20px;
+}
+
+.contact{
+    display: inline-block;
+}
+
