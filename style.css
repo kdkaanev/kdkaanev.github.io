@@ -40,6 +40,12 @@ a{
     text-align: center;
     
 }
+#color{
+    margin-left: 60%;
+}
+#js-moon{
+    display: none;
+}
 .sun{
     padding: 4px;
     
@@ -79,6 +85,7 @@ a{
     width: 100px;
     height: 40px;
     cursor: pointer;
+    border: #5fabff;
 }
 #js-search:hover{
     background-color: #5fabff;

@@ -20,18 +20,49 @@ function solve(){
     const noUser = document.querySelector('#err')
     const sun = document.querySelector('#js-sun')
     const main = document.querySelector('#main')
-    let a = ''
-    console.log(a)
-    sun.addEventListener('click', changeTeme)
-    searchBtn.addEventListener('click', searchHandler)
+    const them = document.querySelector('#color')
+    const moon = document.querySelector('#js-moon')
+    searchUser.value = 'octocat'
+    
    
+    
+   
+    searchBtn.addEventListener('click', searchHandler)
 
+    
+    sun.addEventListener('click', changeTeme)
+    moon.addEventListener('click',reset, searchHandler)
+  
+      
+    
+    function reset(){
+        
+        window.location.reload()
+        
+        
+    }
     function changeTeme(){
+        
+        
+     
+        them.textContent = 'DARK'
+        sun.style.display = 'none'
+        moon.style.display = 'inline'
         main.style.backgroundColor = "#f6f8ff";
         main.style.color = 'black'
         document.body.style.backgroundColor = '#f6f8ff'
         
-        document.querySelector('#search').style.backgroundColor = '#f6f8ff'
+        document.querySelector('#search').style.backgroundColor = '#fefefe'
+        let user = document.querySelector('#js-user')
+        user.style.backgroundColor = '#fefefe'
+        user.style.color = 'black'
+        user.style.border = '#fefefe'
+        document.querySelector('#search > div > svg > path').style.fill = 'rgb(0 121 254)'
+        document.querySelector('#card').style.backgroundColor = '#fefefe'
+        document.querySelector('#card-data').style.backgroundColor = '#f6f8ff'
+        document.querySelector('#card-contact').style.color = 'black'
+        
+      
                                     
     }
 
@@ -41,7 +72,8 @@ function solve(){
         fetch(BASE_URL+user)
             .then((resp) =>resp.json())
             .then((data) =>{
-                console.log(data)
+                
+                
                if(data.message === 'Not Found'){
                 noUser.textContent = 'No results'
                }
@@ -67,7 +99,7 @@ function solve(){
                 folls.textContent = followers
                 follg .textContent = following
                 is_available(location, blog, twitter_username,company)
-
+                
                
                
               
@@ -75,6 +107,7 @@ function solve(){
             .catch(err => console.log(err.message))
             
     }
+   
     function showName(userName, loginName){
         if(userName === null){
             return loginName
@@ -95,8 +128,10 @@ function solve(){
         }
     
         function is_available(loc, blog, tw, comp){
-            aWeb =document.querySelector('#js-web > a')
-            console.log(aWeb)
+      
+          
+
+          
             if(loc === null){
                 locationUser.textContent = 'Not Available'
                 locationUser.style.opacity = 0.5
@@ -105,24 +140,34 @@ function solve(){
                 
             }
             if(blog === ""){
-                webUser.removeChild(aWeb)
+                
                 webUser.textContent = 'Not Available'
                 webUser.style.opacity = 0.5
                     
             }else{
+                webUser.textContent = ''
+                let aWeb = document.createElement('a')
                 aWeb.textContent = blog
+                aWeb.setAttribute('href', blog)
+                webUser.appendChild(aWeb)
+                webUser.style.opacity = 1
+                if(them.textContent === 'DARK'){
+                    aWeb.style.color = 'black'
+                }
             }
             if(tw === null){
                 twittUser.textContent = 'Not Available'
                 twittUser.style.opacity = 0.5
             }else{
-                let twittLink = document.createElement('a')
-               
-                twittLink.textContent = tw
-                twittLink.href = `https://twitter.com/${tw}`
+                twittUser.textContent = ''
+                let aTwit = document.createElement('a')
+                aTwit.textContent = `https://twitter.com/${tw}`
+                aTwit.setAttribute('href',`https://twitter.com/${tw}`)
                 twittUser.style.opacity = 1
-                twittUser.textContent= ''
-                twittUser.appendChild(twittLink)
+                twittUser.appendChild(aTwit)
+                if(them.textContent === 'DARK'){
+                    aTwit.style.color = 'black'
+                }
                 
                 
             }
@@ -130,14 +175,20 @@ function solve(){
                 companyUser.textContent = 'Not Available'
                 companyUser.style.opacity = 0.5
             }else{
+                
+                companyUser.textContent = ''
                 let companyLink = document.createElement('a')
                 let companyName = comp.substring(1)
                 companyLink.textContent = comp
                 companyLink.href = `https://github.com/${companyName}`
+                companyName.textContent = comp
                 companyUser.appendChild(companyLink)
+                if(them.textContent === 'DARK'){
+                    companyLink.style.color = 'black'
+                }
             }
         }
-        window.addEventListener('load', searchHandler())
+    // window.addEventListener('load', searchHandler())
     
 }
 
