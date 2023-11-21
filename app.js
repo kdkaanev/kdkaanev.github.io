@@ -39,11 +39,10 @@ function solve(){
         
         window.location.reload()
         
-        
     }
     function changeTeme(){
-        
-        
+       
+       
      
         them.textContent = 'DARK'
         sun.style.display = 'none'

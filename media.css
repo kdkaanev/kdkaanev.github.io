@@ -1,0 +1,15 @@
+@media only screen and (max-width: 600px) {
+    #header{
+        display: flex;
+    }
+    #card{
+        width: 100%;
+    }
+    #main{
+        position: relative;
+        width: 90%;
+    }
+    #card-info{
+        display: block;
+    }
+  }
